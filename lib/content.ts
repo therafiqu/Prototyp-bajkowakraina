@@ -15,7 +15,6 @@ export type Location = {
   mapsHref: string;
   facebook: string;
   facebookLabel: string;
-  tour: string;
   image: string;
   imageAlt: string;
   blurb: string;
@@ -37,7 +36,6 @@ export const locations: Location[] = [
     facebook:
       "https://www.facebook.com/pages/Przedszkole-Bajkowa-Kraina/227851290591685",
     facebookLabel: "Przedszkole na Facebooku",
-    tour: "https://bajkowakraina.org/page/przedszkole-wycieczka/",
     image: "/media/kropki.jpg",
     imageAlt:
       "Grupa przedszkolaków z kolorowymi kropkami podczas Dnia Kropki w Bajkowej Krainie",
@@ -59,7 +57,6 @@ export const locations: Location[] = [
     facebook:
       "https://www.facebook.com/pages/Klub-Malucha-%C5%BB%C5%82obek-Bajkowa-Kraina/1617642635148321",
     facebookLabel: "Żłobek na Facebooku",
-    tour: "https://bajkowakraina.org/page/zlobek-wycieczka/",
     image: "/media/gordonki.jpg",
     imageAlt:
       "Maluchy z żłobka leżą na kolorowej chuście podczas zajęć umuzykalniających",
@@ -71,7 +68,6 @@ export const locations: Location[] = [
 export const nav = [
   { href: "/o-nas", label: "O nas" },
   { href: "/oferta", label: "Oferta" },
-  { href: "/galeria", label: "Galeria" },
   { href: "/aktualnosci", label: "Aktualności" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -81,28 +77,23 @@ export const hours = "poniedziałek–piątek, 7:00–17:00";
 export const documents = [
   {
     title: "Kryteria przyjmowania dzieci",
-    href: "https://bajkowakraina.org/uploads/Kryteria%20przyjmowania%20Dzieci%20do%20Przedszkola%202022.doc",
-    note: "Plik opublikowany na dotychczasowej stronie (kryteria 2022).",
+    href: "/dokumenty/kryteria-przyjmowania-dzieci.pdf",
   },
   {
     title: "Wniosek o przyjęcie dziecka",
-    href: "https://bajkowakraina.org/uploads/Wniosek%20o%20przyj%C4%99cie%20dziecka%20do%20przedszkola%20na%20rok%20szkolny%202022_2023.doc",
-    note: "Wzór z dotychczasowej strony. Na stronie linkowano go także przy naborze 2026/2027.",
+    href: "/dokumenty/wniosek-o-przyjecie-dziecka.pdf",
   },
   {
     title: "Regulamin rekrutacji",
-    href: "https://bajkowakraina.org/uploads/Regulamin%20rekrutacji%20dzieci.doc",
-    note: "Regulamin udostępniony przez placówkę.",
+    href: "/dokumenty/regulamin-rekrutacji.pdf",
   },
   {
     title: "Oświadczenie o wielodzietności",
-    href: "https://bajkowakraina.org/uploads/O%C5%9Bwiadczenie%20o%20wielodzietno%C5%9Bci%20rodziny%20kandydata.doc",
-    note: "Załącznik do kryteriów, jeśli dotyczy rodziny.",
+    href: "/dokumenty/oswiadczenie-o-wielodzietnosci.pdf",
   },
   {
     title: "Oświadczenie o samotnym wychowywaniu",
-    href: "https://bajkowakraina.org/uploads/O%C5%9Bwiadczenie%20o%20samotnym%20wychowywaniu%20kandydata.doc",
-    note: "Załącznik do kryteriów, jeśli dotyczy rodziny.",
+    href: "/dokumenty/oswiadczenie-o-samotnym-wychowywaniu.pdf",
   },
 ];
 
@@ -121,8 +112,8 @@ export type Post = {
 export const posts: Post[] = [
   {
     slug: "kropkowy-dzien",
-    title: "Kropkowy dzień",
-    date: "2026-09-17",
+    title: "Dzień Kropki",
+    date: "2026-09-15",
     place: "Przedszkole",
     excerpt:
       "Jedna kropka, a dalej cała historia. Przedszkolaki sprawdzały, co może się z niej zacząć.",
@@ -138,7 +129,7 @@ export const posts: Post[] = [
   {
     slug: "dzien-maszynisty",
     title: "Dzień Maszynisty",
-    date: "2026-09-17",
+    date: "2026-09-16",
     place: "Przedszkole",
     excerpt:
       "Spacer na pobliski dworzec. Dzieci z bliska przyglądały się pracy maszynisty.",
@@ -154,7 +145,7 @@ export const posts: Post[] = [
   {
     slug: "pociag-w-naszym-zlobku",
     title: "Pociąg w naszym żłobku",
-    date: "2026-09-17",
+    date: "2026-09-11",
     place: "Żłobek",
     excerpt:
       "Maluchy w fartuchach ozdabiały własne wagoniki żłobkowego pociągu.",
@@ -170,7 +161,7 @@ export const posts: Post[] = [
   {
     slug: "wrzesniowe-gordonki",
     title: "Wrześniowe gordonki",
-    date: "2026-09-17",
+    date: "2026-09-03",
     place: "Żłobek",
     excerpt:
       "Zajęcia umuzykalniające, które dla dzieci są po prostu świetną zabawą.",
@@ -186,7 +177,7 @@ export const posts: Post[] = [
   {
     slug: "kropeczkowe-muchomorki",
     title: "Kropeczkowe muchomorki",
-    date: "2026-09-17",
+    date: "2026-09-15",
     place: "Żłobek",
     excerpt:
       "Białe kropki na czerwonych kapeluszach. Pędzelki chodziły sprawnie i radośnie.",
@@ -311,7 +302,7 @@ export const faqs = [
   },
   {
     q: "Jak wygląda pierwszy kontakt?",
-    a: "Najkrócej: telefon 510 200 558 albo formularz na stronie. Potem karta zgłoszenia, umowa i wpisowe. Chętnie umawiamy też odwiedziny, żeby rodzic zobaczył salę, a dziecko — nas.",
+    a: "Najkrócej: telefon 510 200 558. Potem karta zgłoszenia, umowa i wpisowe. Chętnie umawiamy też odwiedziny, żeby rodzic zobaczył salę, a dziecko — nas.",
   },
 ];
 

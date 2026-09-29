@@ -48,7 +48,7 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
       <div className="mt-8">
         <ButtonLink href="/rekrutacja">Zapisz dziecko</ButtonLink>
       </div>
-      <div className="mt-12 border-t border-line pt-8">
+      <div className="scroll-rise mt-12 border-t border-line pt-8">
         <h2 className="text-2xl">Dalej w kronice</h2>
         <ul className="mt-4 space-y-3">
           {more.map((item) => (

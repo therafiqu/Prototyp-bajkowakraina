@@ -3,7 +3,7 @@ import { posts } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://bajkowakraina.org";
-  const paths = ["", "/o-nas", "/oferta", "/rekrutacja", "/galeria", "/aktualnosci", "/kontakt", "/polityka-prywatnosci"];
+  const paths = ["", "/o-nas", "/oferta", "/rekrutacja", "/aktualnosci", "/kontakt", "/polityka-prywatnosci"];
   return [
     ...paths.map((path) => ({
       url: `${base}${path || "/"}`,

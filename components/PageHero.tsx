@@ -8,7 +8,7 @@ export function PageHero({
 }: {
   eyebrow: string;
   title: string;
-  lead: string;
+  lead?: string;
   children?: React.ReactNode;
 }) {
   return (
@@ -21,7 +21,9 @@ export function PageHero({
         <h1 className="mt-3 max-w-3xl text-4xl leading-[1.08] text-ink md:text-6xl">
           {title}
         </h1>
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{lead}</p>
+        {lead ? (
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{lead}</p>
+        ) : null}
         {children ? <div className="mt-7">{children}</div> : null}
       </div>
     </section>

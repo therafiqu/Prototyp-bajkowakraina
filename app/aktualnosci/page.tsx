@@ -16,12 +16,12 @@ export default function NewsPage() {
       <PageHero
         eyebrow="Aktualności"
         title="Co robią dzieci, kiedy Was nie ma w szatni."
-        lead="Krótkie relacje z obu placówek. Te same wydarzenia, które od lat trafiają do kroniki — tu da się je przeczytać w minutę."
+        lead="Krótkie relacje z obu placówek."
       />
       <section className="mx-auto max-w-6xl px-5 py-12 md:py-16">
         <ul className="grid gap-6 md:grid-cols-2">
           {posts.map((post) => (
-            <li key={post.slug}>
+            <li key={post.slug} className="scroll-rise">
               <article className="hover-lift h-full overflow-hidden rounded-[28px] border border-line bg-paper">
                 <Link href={`/aktualnosci/${post.slug}`} className="group block">
                   <span className="relative block aspect-[16/10]">
