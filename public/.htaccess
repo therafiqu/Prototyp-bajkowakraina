@@ -1,0 +1,6 @@
+# Bajkowa Kraina — Apache / IDHosting (static export)
+Options -Indexes
+DirectoryIndex index.html
+
+# Custom 404 from Next.js static export
+ErrorDocument 404 /404.html
