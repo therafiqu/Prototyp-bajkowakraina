@@ -6,7 +6,7 @@ import { phoneDisplay, phoneHref } from "@/lib/content";
 
 export function MobileDock() {
   const pathname = usePathname();
-  if (pathname === "/rekrutacja") return null;
+  if (pathname === "/kontakt") return null;
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-paper/95 p-3 backdrop-blur md:hidden">
@@ -19,7 +19,7 @@ export function MobileDock() {
           <span className="sr-only"> {phoneDisplay}</span>
         </a>
         <Link
-          href="/rekrutacja"
+          href="/kontakt"
           className="rounded-full bg-teal-deep py-3 text-center text-sm font-semibold text-white"
         >
           Zapisz dziecko

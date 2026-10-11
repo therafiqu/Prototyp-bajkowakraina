@@ -26,11 +26,6 @@ export function Footer() {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link href="/rekrutacja" className="text-cream/85 hover:text-white">
-                Rekrutacja
-              </Link>
-            </li>
           </ul>
         </div>
         {locations.map((place) => (
@@ -56,7 +51,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-5 text-sm text-cream/70 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Bajkowa Kraina. Przedszkole i Klub Malucha.</p>
+          <p>© {new Date().getFullYear()} Bajkowa Kraina. Przedszkole i Żłobek.</p>
           <Link href="/polityka-prywatnosci" className="hover:text-white">
             Polityka prywatności
           </Link>

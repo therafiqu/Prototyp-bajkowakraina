@@ -55,7 +55,7 @@ const jsonLd = {
     },
     {
       "@type": "ChildCare",
-      name: "Klub Malucha – Żłobek Bajkowa Kraina",
+      name: "Żłobek Bajkowa Kraina",
       telephone: "+48510200558",
       email: "klub.radziszowska@op.pl",
       address: {

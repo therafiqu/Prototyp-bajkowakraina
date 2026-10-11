@@ -17,7 +17,7 @@ const stats = [
   { value: "od 2009", label: "pierwsze niepubliczne przedszkole w Skawinie", tone: "text-teal-deep" },
   { value: "2", label: "placówki: przedszkole i żłobek", tone: "text-coral-deep" },
   { value: "7–17", label: "opieka przez dziesięć godzin", tone: "text-sky-deep" },
-  { value: "3", label: "posiłki dziennie od cateringu", tone: "text-berry" },
+  { value: "5", label: "posiłki dziennie od cateringu", tone: "text-berry" },
 ];
 
 const valueTones = ["bg-sun", "bg-mint", "bg-sky", "bg-rose"];
@@ -39,20 +39,19 @@ export default function HomePage() {
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
               Kameralna opieka, stały rytm dnia i nauka przez zabawę. Dwie placówki
               w Skawinie — żłobek dla młodszych dzieci i przedszkole dla maluchów
-              w wieku 3–6 lat.
+              w wieku 2,5-6 lat.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/rekrutacja">Zapisz dziecko</ButtonLink>
-              <ButtonLink href="/kontakt" variant="secondary">
-                Umów odwiedziny
+            <div className="mt-8 inline-flex w-fit max-w-full flex-col gap-3">
+              <ButtonLink href="/kontakt" className="w-full">
+                Zapisz dziecko
               </ButtonLink>
+              <p className="text-sm text-muted">
+                Dyrekcja, zapisy i rekrutacja:{" "}
+                <a href={phoneHref} className="font-semibold text-teal-deep">
+                  {phoneDisplay}
+                </a>
+              </p>
             </div>
-            <p className="mt-4 text-sm text-muted">
-              Dyrekcja, zapisy i rekrutacja:{" "}
-              <a href={phoneHref} className="font-semibold text-teal-deep">
-                {phoneDisplay}
-              </a>
-            </p>
           </div>
           <div className="rise relative mx-auto w-full max-w-md lg:max-w-none [animation-delay:140ms]">
             <div className="relative aspect-[3/4] overflow-hidden rounded-[28px] shadow-[0_30px_70px_-36px_rgba(36,48,46,0.55)]">
@@ -182,7 +181,7 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-sm text-muted">Godziny obu placówek: {hours}. Wpisowe: 500 zł jednorazowo.</p>
+        <p className="mt-6 text-sm text-muted">Godziny obu placówek: {hours}. Wpisowe i czesne podajemy podczas rozmowy telefonicznej.</p>
       </section>
 
       <section className="bg-paper">
@@ -245,13 +244,13 @@ export default function HomePage() {
           <span className="float-mid pointer-events-none absolute bottom-0 left-10 h-20 w-20 rounded-full bg-mint/30 blur-2xl" aria-hidden />
           <div className="relative grid items-center gap-8 md:grid-cols-[1.4fr_0.6fr]">
             <div>
-              <h2 className="text-3xl text-ink md:text-5xl">Jest miejsce na rozmowę. Nie na długi formularz.</h2>
-              <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
-                Nabór trwa cały rok. Wpisowe 500 zł rezerwuje miejsce. Wysokość czesnego podajemy od razu przy telefonie.
+              <h2 className="text-3xl text-ink md:text-5xl">Zapraszamy do kontaktu telefonicznego.</h2>
+              <p className="mt-4 text-lg leading-relaxed text-muted">
+                Nabór trwa cały rok. Wpisowe i czesne podajemy podczas rozmowy&nbsp;telefonicznej.
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <ButtonLink href="/rekrutacja">Przejdź do rekrutacji</ButtonLink>
+              <ButtonLink href="/kontakt">Przejdź do rekrutacji</ButtonLink>
               <ButtonLink href={phoneHref} variant="light">
                 Zadzwoń · {phoneDisplay}
               </ButtonLink>
@@ -261,9 +260,11 @@ export default function HomePage() {
       </section>
 
       <section className="border-t border-line bg-paper">
-        <div className="mx-auto grid max-w-6xl gap-8 px-5 py-16 md:grid-cols-[0.7fr_1.3fr] md:py-20">
-          <h2 className="scroll-rise text-3xl">Pytania, które rodzice zadają na początku</h2>
-          <div className="scroll-rise">
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-5 py-16 md:py-20">
+          <h2 className="scroll-rise text-center text-3xl leading-snug md:text-4xl">
+            Pytania, które rodzice zadają na początku
+          </h2>
+          <div className="scroll-rise mt-8 w-full max-w-2xl">
             {faqs.slice(0, 4).map((item) => (
               <details key={item.q} className="group border-b border-line">
                 <summary className="flex cursor-pointer items-center justify-between gap-4 py-5 text-lg font-semibold">

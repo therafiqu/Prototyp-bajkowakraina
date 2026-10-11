@@ -14,12 +14,12 @@ const milestones = [
   {
     year: "2009",
     title: "Powstaje przedszkole",
-    text: "Jako pierwsze niepubliczne przedszkole w Skawinie, z myślą o dzieciach w wieku 3–6 lat.",
+    text: "Jako pierwsze niepubliczne przedszkole w Skawinie, z myślą o dzieciach w wieku 2,5-6 lat.",
   },
   {
     year: "2015",
     title: "Otwieramy żłobek",
-    text: "W czerwcu ruszamy z Klubem Malucha przy ul. Radziszowskiej, żeby rodzice mogli wrócić do pracy spokojniej.",
+    text: "W czerwcu ruszamy z żłobkiem przy ul. Radziszowskiej, żeby rodzice mogli wrócić do pracy spokojniej.",
   },
   {
     year: "2026",
@@ -33,22 +33,19 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="O placówce"
-        title="Zadowolenie dzieci to nasz priorytet"
-        lead="Bajkowa Kraina powstała w 2009 roku. Chcieliśmy wynieść edukację najmłodszych wyżej — bez zabierania dzieciom radości. W 2015 doszedł żłobek, żeby ta droga mogła zacząć się wcześniej."
+        title="O nas – małe przedszkole, wielkie serca"
+        lead="Dziś pomagamy odkrywać świat. Jutro pomagamy odważnie w nim żyć."
       />
       <section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-24">
         <div className="scroll-rise space-y-5 text-lg leading-relaxed text-muted">
           <p>
-            Największą wartością jest szczęście małego człowieka. Rozwijamy jego potencjał przez opiekę, poczucie bezpieczeństwa i codzienną stymulację: zabawę, która uczy, i naukę, która nadal jest zabawą.
+            Wierzymy, że każde dziecko jest wyjątkowe i każde zasługuje na to, by być dostrzeżone, wysłuchane i otoczone troską. Dlatego tworzymy kameralne przedszkole, w którym najważniejszy jest mały człowiek – jego potrzeby, emocje, zainteresowania i indywidualne tempo rozwoju.
           </p>
           <p>
-            Pobyt u nas ma kojarzyć się z odkrywaniem świata w towarzystwie przyjaciół. Korzystamy z twórczych, aktywizujących metod, żeby dziecko chciało uczyć się dalej — w szkole, nie mimo szkoły.
-          </p>
-          <p>
-            Kadra jest z dziećmi także przy plastyce, tańcu i wyjściach. Wspólne doświadczenia budują zaufanie szybciej niż regulamin powieszony w szatni.
+            Naszym celem jest nie tylko przygotowanie dziecka do rozpoczęcia nauki w szkole, ale przede wszystkim wyposażenie go w umiejętności, które pomogą mu odnaleźć się w otaczającym świecie.
           </p>
           <p className="text-ink">
-            Przedszkole to początek drogi. Jesteśmy po to, żeby ten początek był przygodą pełną spokoju, ciekawości i bliskości.
+            Bo dla nas przedszkole to coś więcej niż miejsce opieki i nauki. To przestrzeń, w której dziecko buduje fundamenty na całe życie.
           </p>
         </div>
         <div className="scroll-rise relative min-h-80 overflow-hidden rounded-[28px]">
@@ -97,13 +94,13 @@ export default function AboutPage() {
         </div>
         <div className="scroll-rise mt-10 rounded-[28px] border border-line bg-paper p-6 md:p-8">
           <h2 className="text-2xl">Bezpieczeństwo, które da się sprawdzić</h2>
-          <ul className="mt-4 grid gap-3 text-muted md:grid-cols-2">
+          <ul className="mt-5 max-w-2xl list-disc space-y-2.5 pl-5 leading-relaxed text-muted">
             <li>Aktualne odbiory Sanepidu i Państwowej Straży Pożarnej w obu oddziałach.</li>
             <li>Standardy ochrony małoletnich — pełny dokument udostępniamy rodzicom w placówce.</li>
             <li>Odznaka Zaufany Żłobek 2026 i Przyjazne Rodzinie.</li>
             <li>Profil przedszkola w serwisie Super Przedszkole.</li>
           </ul>
-          <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
+          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold">
             <a className="text-teal-deep" href="https://przedszkole-talentow.pl/laureaci/zlobki/zaufany-zlobek" target="_blank" rel="noreferrer">
               Zaufany Żłobek
             </a>
@@ -115,8 +112,8 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
-        <div className="mt-8">
-          <ButtonLink href="/rekrutacja">Zapytaj o miejsce</ButtonLink>
+        <div className="mt-8 flex justify-center">
+          <ButtonLink href="/kontakt">Zapytaj o miejsce</ButtonLink>
         </div>
       </section>
     </>

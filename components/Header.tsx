@@ -70,7 +70,7 @@ export function Header() {
           >
             {phoneDisplay}
           </a>
-          <Link href="/rekrutacja" className={buttonClass("primary", "px-4 py-2.5 text-sm")}>
+          <Link href="/kontakt" className={buttonClass("primary", "px-4 py-2.5 text-sm")}>
             Zapisz dziecko
           </Link>
         </div>
@@ -109,7 +109,7 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/rekrutacja" className={`${buttonClass()} mt-3`}>
+              <Link href="/kontakt" className={`${buttonClass()} mt-3`}>
                 Zapisz dziecko
               </Link>
               <a href={phoneHref} className={`${buttonClass("secondary")} mt-2`}>

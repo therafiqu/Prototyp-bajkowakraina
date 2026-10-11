@@ -46,7 +46,7 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
         </a>
       </p>
       <div className="mt-8">
-        <ButtonLink href="/rekrutacja">Zapisz dziecko</ButtonLink>
+        <ButtonLink href="/kontakt">Zapisz dziecko</ButtonLink>
       </div>
       <div className="scroll-rise mt-12 border-t border-line pt-8">
         <h2 className="text-2xl">Dalej w kronice</h2>
