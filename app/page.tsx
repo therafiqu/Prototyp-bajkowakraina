@@ -1,16 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ButtonLink } from "@/components/Button";
 import { StoryShapes } from "@/components/StoryShapes";
 import {
   faqs,
-  formatDate,
   hours,
   included,
   locations,
   phoneDisplay,
   phoneHref,
-  posts,
 } from "@/lib/content";
 
 const stats = [
@@ -54,11 +51,11 @@ export default function HomePage() {
             </div>
           </div>
           <div className="rise relative mx-auto w-full max-w-md lg:max-w-none [animation-delay:140ms]">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-[28px] shadow-[0_30px_70px_-36px_rgba(36,48,46,0.55)]">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-[28px] shadow-[0_30px_70px_-36px_rgba(36,48,46,0.55)]">
               <div className="scroll-zoom absolute inset-[-10%]">
                 <Image
-                  src="/media/stacja.jpg"
-                  alt="Przedszkolaki w odblaskowych kamizelkach oglądają pociąg na stacji podczas Dnia Maszynisty"
+                  src="/media/kalosze.jpg"
+                  alt="Dzieci w kolorowych kaloszach po zabawie na dworze"
                   fill
                   priority
                   sizes="(min-width: 1024px) 480px, 90vw"
@@ -71,7 +68,7 @@ export default function HomePage() {
                 <div className="relative aspect-square">
                   <Image
                     src="/media/muchomor.jpg"
-                    alt="Dziecko z żłobka maluje białe kropki na muchomorze"
+                    alt="Dziewczynka maluje przy stole"
                     fill
                     sizes="180px"
                     className="object-cover"
@@ -79,11 +76,11 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="parallax-y absolute right-3 top-3">
-            <div className="float-mid rounded-2xl bg-butter-soft/95 px-4 py-3 shadow-lg backdrop-blur [animation-delay:-1.5s]">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal">Opieka</p>
-              <p className="font-display text-2xl text-ink">7:00–17:00</p>
-              <p className="text-xs text-muted">pon.–pt.</p>
+            <div className="parallax-y absolute right-2 top-2 sm:right-3 sm:top-3">
+            <div className="float-mid rounded-2xl bg-butter-soft/95 px-3 py-2 shadow-lg backdrop-blur [animation-delay:-1.5s] sm:px-4 sm:py-3">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-teal sm:text-xs">Opieka</p>
+              <p className="font-display text-lg text-ink sm:text-2xl">7:00–17:00</p>
+              <p className="text-[10px] text-muted sm:text-xs">pon.–pt.</p>
             </div>
             </div>
           </div>
@@ -115,7 +112,13 @@ export default function HomePage() {
             <article key={place.id} id={place.id} className="scroll-rise">
               <div className="hover-lift h-full overflow-hidden rounded-[28px] border border-line bg-paper">
               <div className="relative aspect-[16/10]">
-                <Image src={place.image} alt={place.imageAlt} fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
+                <Image
+                  src={place.image}
+                  alt={place.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
               </div>
               <div className="p-6 md:p-8">
                 <p className="text-sm font-semibold text-coral-deep">{place.ages}</p>
@@ -182,60 +185,6 @@ export default function HomePage() {
           ))}
         </ul>
         <p className="mt-6 text-sm text-muted">Godziny obu placówek: {hours}. Wpisowe i czesne podajemy podczas rozmowy telefonicznej.</p>
-      </section>
-
-      <section className="bg-paper">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 py-16 md:grid-cols-2 md:py-24">
-          <div className="scroll-rise relative aspect-[4/3] overflow-hidden rounded-[28px]">
-            <div className="scroll-zoom absolute inset-[-10%]">
-              <Image
-                src="/media/teatr.jpg"
-                alt="Dzieci z żłobka oglądają wakacyjny spektakl teatru"
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
-            </div>
-          </div>
-          <div className="scroll-rise">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal">Z życia placówek</p>
-            <h2 className="mt-3 text-3xl md:text-5xl">Najpierw zobacz, potem zdecyduj.</h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted">
-              Kronika pokazuje prawdziwe sale, nie katalogową ilustrację.
-              Zapraszamy też na żywo — krótka wizyta mówi więcej niż folder.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <ButtonLink href="/aktualnosci">Czytaj aktualności</ButtonLink>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-        <div className="flex items-end justify-between gap-4">
-          <h2 className="scroll-rise text-3xl md:text-4xl">Ostatnio u nas</h2>
-          <Link href="/aktualnosci" className="text-sm font-semibold text-teal-deep">
-            Wszystkie wpisy
-          </Link>
-        </div>
-        <ul className="mt-8 grid gap-5 md:grid-cols-3">
-          {posts.slice(0, 3).map((post) => (
-            <li key={post.slug} className="scroll-rise">
-              <Link href={`/aktualnosci/${post.slug}`} className="hover-lift group block h-full overflow-hidden rounded-[24px] border border-line bg-paper">
-                <span className="relative block aspect-[4/3]">
-                  <Image src={post.image} alt={post.imageAlt} fill className="object-cover transition duration-500 group-hover:scale-[1.03]" sizes="(min-width: 768px) 30vw, 100vw" />
-                </span>
-                <span className="block p-5">
-                  <span className="text-xs font-semibold uppercase tracking-[0.12em] text-coral-deep">
-                    {post.place} · {formatDate(post.date)}
-                  </span>
-                  <span className="mt-2 block text-xl font-semibold text-ink">{post.title}</span>
-                  <span className="mt-2 block text-sm leading-relaxed text-muted">{post.excerpt}</span>
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="mx-auto max-w-6xl px-5 pb-16 md:pb-24">

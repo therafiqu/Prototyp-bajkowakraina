@@ -39,9 +39,9 @@ export const locations: Location[] = [
     facebook:
       "https://www.facebook.com/pages/Przedszkole-Bajkowa-Kraina/227851290591685",
     facebookLabel: "Przedszkole na Facebooku",
-    image: "/media/kropki.jpg",
+    image: "/media/rysunki.jpg",
     imageAlt:
-      "Grupa przedszkolaków z kolorowymi kropkami podczas Dnia Kropki w Bajkowej Krainie",
+      "Dziecko i opiekunka rysują razem przy stoliku",
     blurb:
       "Pierwsze niepubliczne przedszkole w Skawinie. Przygotowujemy dzieci do szkoły przez zabawę, ruch i codzienne, spokojne rytuały.",
   },
@@ -62,9 +62,9 @@ export const locations: Location[] = [
     facebook:
       "https://www.facebook.com/pages/Klub-Malucha-%C5%BB%C5%82obek-Bajkowa-Kraina/1617642635148321",
     facebookLabel: "Żłobek na Facebooku",
-    image: "/media/gordonki.jpg",
+    image: "/media/aparat.jpg",
     imageAlt:
-      "Maluchy z żłobka leżą na kolorowej chuście podczas zajęć umuzykalniających",
+      "Małe dziecko w krzesełku trzyma zabawkowy aparat fotograficzny",
     blurb:
       "Żłobek otwarty w 2015 roku. Kameralna opieka, bliskość i dużo swobodnej zabawy — także na własnym placu zabaw.",
   },
@@ -73,7 +73,6 @@ export const locations: Location[] = [
 export const nav = [
   { href: "/o-nas", label: "O nas" },
   { href: "/oferta", label: "Oferta" },
-  { href: "/aktualnosci", label: "Aktualności" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -101,188 +100,6 @@ export const documents = [
     href: "/dokumenty/oswiadczenie-o-samotnym-wychowywaniu.pdf",
   },
 ];
-
-export type Post = {
-  slug: string;
-  title: string;
-  date: string;
-  place: Place;
-  excerpt: string;
-  body: string[];
-  image: string;
-  imageAlt: string;
-  source: string;
-};
-
-export const posts: Post[] = [
-  {
-    slug: "kropkowy-dzien",
-    title: "Dzień Kropki",
-    date: "2026-09-15",
-    place: "Przedszkole",
-    excerpt:
-      "Jedna kropka, a dalej cała historia. Przedszkolaki sprawdzały, co może się z niej zacząć.",
-    body: [
-      "W przedszkolu obchodziliśmy Dzień Kropki. Dzieci miały zajęcia rozwijające wyobraźnię: co może zacząć się od jednej, zwykłej kropki.",
-      "Powstały kolorowe prace, a sala zamieniła się w galerię kropek — dużych, małych i takich, które dopiero szukają swojego kształtu.",
-    ],
-    image: "/media/kropki.jpg",
-    imageAlt:
-      "Przedszkolaki stoją przy tablicy z napisem Dzień Kropki i trzymają kolorowe koła",
-    source: "https://bajkowakraina.org/blog/kropkowy-dzien/",
-  },
-  {
-    slug: "dzien-maszynisty",
-    title: "Dzień Maszynisty",
-    date: "2026-09-16",
-    place: "Przedszkole",
-    excerpt:
-      "Spacer na pobliski dworzec. Dzieci z bliska przyglądały się pracy maszynisty.",
-    body: [
-      "Dzień Maszynisty jest ważny dla każdego, kto podróżuje pociągiem. Przedszkolaki poszły z tej okazji na pobliski dworzec, żeby bliżej poznać pracę maszynisty.",
-      "Dzieci były zachwycone. W kamizelkach i czapkach oglądały pociąg z peronu — spokojnie, razem i z prawdziwą ciekawością.",
-    ],
-    image: "/media/stacja.jpg",
-    imageAlt:
-      "Przedszkolaki w odblaskowych kamizelkach stoją na peronie i patrzą na pociąg",
-    source: "https://bajkowakraina.org/blog/dzien-maszynisty/",
-  },
-  {
-    slug: "pociag-w-naszym-zlobku",
-    title: "Pociąg w naszym żłobku",
-    date: "2026-09-11",
-    place: "Żłobek",
-    excerpt:
-      "Maluchy w fartuchach ozdabiały własne wagoniki żłobkowego pociągu.",
-    body: [
-      "Z okazji Dnia Maszynisty nasze maluszki zamieniły się w artystów. Włożyły fartuchy i każde ozdobiło swój wagonik w żłobkowym pociągu.",
-      "Sprawiło im to wiele radości. Wagoniki wisiały jeden za drugim, a farba była dokładnie tam, gdzie miała być: na papierze i odrobinę na fartuchach.",
-    ],
-    image: "/media/pociag.jpg",
-    imageAlt:
-      "Troje dzieci w żółtych fartuchach maluje kolorowe wagoniki zawieszone na ścianie",
-    source: "https://bajkowakraina.org/blog/pociag-w-naszym-zlobku/",
-  },
-  {
-    slug: "wrzesniowe-gordonki",
-    title: "Wrześniowe gordonki",
-    date: "2026-09-03",
-    place: "Żłobek",
-    excerpt:
-      "Zajęcia umuzykalniające, które dla dzieci są po prostu świetną zabawą.",
-    body: [
-      "Dzieci w żłobku biorą udział w zajęciach umuzykalniających zwanych gordonkami. To łagodny sposób stymulowania uwagi i słuchu — a dla nich samych przede wszystkim zabawa.",
-      "We wrześniu gordonki wróciły do rytmu tygodnia: wspólne leżenie na chuście, słuchanie i ruch, bez pośpiechu.",
-    ],
-    image: "/media/gordonki.jpg",
-    imageAlt:
-      "Grupa małych dzieci leży na wielokolorowej chuście podczas gordonków w żłobku",
-    source: "https://bajkowakraina.org/blog/wrzesniowe-gordonki/",
-  },
-  {
-    slug: "kropeczkowe-muchomorki",
-    title: "Kropeczkowe muchomorki",
-    date: "2026-09-15",
-    place: "Żłobek",
-    excerpt:
-      "Białe kropki na czerwonych kapeluszach. Pędzelki chodziły sprawnie i radośnie.",
-    body: [
-      "Maluszki chwyciły za pędzelki i dekorowały muchomory białymi kropkami. Poszło im bardzo sprawnie.",
-      "Pracowały z wielką radością — każdy muchomor dostał dokładnie tyle kropek, ile dziecko uznało za potrzebne.",
-    ],
-    image: "/media/muchomor.jpg",
-    imageAlt:
-      "Małe dziecko siedzi przy stole i stempluje białe kropki na czerwonym muchomorze",
-    source: "https://bajkowakraina.org/blog/kropeczkowe-muchomorki/",
-  },
-  {
-    slug: "wakacyjny-teatr",
-    title: "Wakacyjny teatr",
-    date: "2026-07-13",
-    place: "Żłobek",
-    excerpt:
-      "Teatr Eden przyjechał do żłobka z wakacyjnym, interaktywnym spektaklem.",
-    body: [
-      "W wakacje dzieci się nie nudzą. Żłobek odwiedził Teatr Eden z wakacyjnym spektaklem.",
-      "Dzięki interaktywnej formie dzieci nie tylko patrzyły — brały udział w zabawie, siedząc blisko aktorów i pacynki.",
-    ],
-    image: "/media/teatr.jpg",
-    imageAlt:
-      "Dzieci z żłobka siedzą na podłodze i oglądają spektakl aktora z pacynkami",
-    source: "https://bajkowakraina.org/blog/wakacyjny-teatr/",
-  },
-  {
-    slug: "na-placu-zabaw",
-    title: "Na placu zabaw",
-    date: "2026-07-13",
-    place: "Żłobek",
-    excerpt:
-      "Codzienne wyjścia na zewnątrz. Tu dzieci mogą się wybiegać.",
-    body: [
-      "Gdy tylko pogoda sprzyja, chętnie korzystamy z naszego placu zabaw. Dzieci mogą się wybiegać i świetnie bawić na świeżym powietrzu.",
-      "Plac jest tuż przy żłobku, więc codzienne wyjścia na zewnątrz są zwykłą częścią dnia, a nie wyjątkiem.",
-    ],
-    image: "/media/plac.jpg",
-    imageAlt: "Dziecko wygląda z domku na placu zabaw przy żłobku Bajkowa Kraina",
-    source: "https://bajkowakraina.org/blog/na-placu-zabaw/",
-  },
-  {
-    slug: "witamy-wakacje",
-    title: "Witamy wakacje",
-    date: "2026-06-29",
-    place: "Przedszkole",
-    excerpt:
-      "Rok szkolny za nami. Przedszkolaki zasłużyły na wytchnienie.",
-    body: [
-      "Zakończyliśmy rok szkolny. Dzieci dzielnie pracowały cały rok i teraz czeka je wytchnienie.",
-      "Gratulujemy wszystkim naszym przedszkolakom. Wakacje witamy spokojnie — z dumą z tego, co już potrafią.",
-    ],
-    image: "/media/wakacje.jpg",
-    imageAlt: "Zdjęcie z zakończenia roku szkolnego w przedszkolu Bajkowa Kraina",
-    source: "https://bajkowakraina.org/blog/witamy-wakacje/",
-  },
-  {
-    slug: "pozegnanie-starszakow",
-    title: "Pożegnanie starszaków",
-    date: "2026-06-29",
-    place: "Żłobek",
-    excerpt:
-      "Starsi wychowankowie żłobka od września idą do przedszkola.",
-    body: [
-      "Pożegnaliśmy starszaki. Nasi wychowankowie od września idą do przedszkola.",
-      "Życzymy absolwentom łagodnego startu.",
-    ],
-    image: "/media/pozegnanie.jpg",
-    imageAlt: "Ujęcie z pożegnania starszych dzieci w żłobku Bajkowa Kraina",
-    source: "https://bajkowakraina.org/blog/pozegnanie-starszakow/",
-  },
-  {
-    slug: "wycieczka-hucisko",
-    title: "Wycieczka do Huciska",
-    date: "2026-06-29",
-    place: "Przedszkole",
-    excerpt:
-      "Na zakończenie roku dzieci pojechały do Domu Opowieści w Hucisku.",
-    body: [
-      "Na zakończenie roku wybraliśmy się do Domu Opowieści w Hucisku. Dzieci mogły pobyć w otoczeniu natury i pochodzić poza salą.",
-    ],
-    image: "/media/hucisko.jpg",
-    imageAlt: "Zdjęcie grupowe z wycieczki przedszkola do Domu Opowieści w Hucisku",
-    source: "https://bajkowakraina.org/blog/wycieczka-hucisko/",
-  },
-];
-
-export function formatDate(iso: string) {
-  return new Intl.DateTimeFormat("pl-PL", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(new Date(`${iso}T12:00:00`));
-}
-
-export function getPost(slug: string) {
-  return posts.find((post) => post.slug === slug);
-}
 
 export const faqs = [
   {

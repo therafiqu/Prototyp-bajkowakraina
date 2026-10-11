@@ -27,6 +27,9 @@ export default function PrivacyPage() {
         <p>
           Masz prawo zapytać o swoje dane, poprawić je albo poprosić o usunięcie. W sprawie dziecka najszybciej zadzwonić do dyrekcji.
         </p>
+        <p>
+          Wszystkie zdjęcia są przykładowe, w ramach ustawy o bezpieczeństwie dzieci i młodzieży wchodzącej w życie w 2027&nbsp;r.
+        </p>
       </div>
     </>
   );

@@ -51,8 +51,8 @@ export default function AboutPage() {
         <div className="scroll-rise relative min-h-80 overflow-hidden rounded-[28px]">
           <div className="scroll-zoom absolute inset-[-10%]">
           <Image
-            src="/media/gordonki.jpg"
-            alt="Dzieci z żłobka podczas wspólnych zajęć na kolorowej chuście"
+            src="/media/motylek.jpg"
+            alt="Dziecko koloruje motyla kredką przy stoliku"
             fill
             className="object-cover"
             sizes="(min-width: 768px) 40vw, 100vw"
