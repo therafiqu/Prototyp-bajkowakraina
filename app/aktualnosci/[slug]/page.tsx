@@ -22,7 +22,9 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
-  const more = posts.filter((item) => item.slug !== post.slug).slice(0, 2);
+  const index = posts.findIndex((item) => item.slug === post.slug);
+  const previous = posts[(index - 1 + posts.length) % posts.length];
+  const next = posts[(index + 1) % posts.length];
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-12 md:py-16">
@@ -39,26 +41,22 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
-      <p className="mt-6 text-sm text-muted">
-        Relacja na podstawie kroniki placówki.{" "}
-        <a href={post.source} className="font-semibold text-teal-deep" target="_blank" rel="noreferrer">
-          Oryginalny wpis
-        </a>
-      </p>
       <div className="mt-8">
         <ButtonLink href="/kontakt">Zapisz dziecko</ButtonLink>
       </div>
       <div className="scroll-rise mt-12 border-t border-line pt-8">
         <h2 className="text-2xl">Dalej w kronice</h2>
         <ul className="mt-4 space-y-3">
-          {more.map((item) => (
-            <li key={item.slug}>
-              <Link href={`/aktualnosci/${item.slug}`} className="font-semibold text-teal-deep">
-                {item.title}
-              </Link>
-              <span className="text-muted"> · {item.place}</span>
-            </li>
-          ))}
+          <li>
+            <Link href={`/aktualnosci/${previous.slug}`} className="font-semibold text-teal-deep">
+              Poprzednie
+            </Link>
+          </li>
+          <li>
+            <Link href={`/aktualnosci/${next.slug}`} className="font-semibold text-teal-deep">
+              Następne
+            </Link>
+          </li>
         </ul>
       </div>
     </article>
