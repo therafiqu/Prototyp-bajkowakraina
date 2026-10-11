@@ -250,17 +250,17 @@ export function HomeHero() {
             reduce={reduce}
             delay={0.18}
             from={{ x: "48vw", y: "16%" }}
-            className="absolute -left-3 bottom-8 hidden w-36 sm:block md:w-44"
+            className="absolute -left-3 bottom-8 hidden w-[6.93rem] sm:block md:w-[8.47rem]"
           >
             <div className="parallax-y-rev">
-              <div className="float-slow overflow-hidden rounded-2xl border-4 border-cream shadow-lg">
+              <div className="float-slow overflow-hidden rounded-2xl border-4 border-cream bg-cream shadow-lg">
                 <div className="relative aspect-square">
                   <Image
-                    src="/media/muchomor.jpg"
-                    alt="Dziewczynka maluje przy stole"
+                    src="/logo.png"
+                    alt="Logo Bajkowa Kraina"
                     fill
                     sizes="180px"
-                    className="object-cover"
+                    className="object-contain p-3"
                   />
                 </div>
               </div>
