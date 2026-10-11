@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/Button";
-import { StoryShapes } from "@/components/StoryShapes";
+import { HomeHero } from "@/components/HomeHero";
 import {
   faqs,
   hours,
@@ -23,69 +23,7 @@ const dayTones = ["bg-peach", "bg-sky-soft", "bg-butter-soft", "bg-mint-soft", "
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <StoryShapes />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-14 md:py-20 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="rise">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-teal">
-              Skawina · przedszkole i żłobek · od 2009
-            </p>
-            <h1 className="mt-4 text-4xl leading-[1.05] text-ink sm:text-5xl md:text-6xl">
-              Miejsce, w którym szczęście dziecka jest pierwszą zasadą.
-            </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
-              Kameralna opieka, stały rytm dnia i nauka przez zabawę. Dwie placówki
-              w Skawinie — żłobek dla młodszych dzieci i przedszkole dla maluchów
-              w wieku 2,5-6 lat.
-            </p>
-            <div className="mt-8 inline-flex w-fit max-w-full flex-col gap-3">
-              <ButtonLink href="/kontakt" className="w-full">
-                Zapisz dziecko
-              </ButtonLink>
-              <p className="text-sm text-muted">
-                Dyrekcja, zapisy i rekrutacja:{" "}
-                <a href={phoneHref} className="font-semibold text-teal-deep">
-                  {phoneDisplay}
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="rise relative mx-auto w-full max-w-md lg:max-w-none [animation-delay:140ms]">
-            <div className="relative aspect-[3/2] overflow-hidden rounded-[28px] shadow-[0_30px_70px_-36px_rgba(36,48,46,0.55)]">
-              <div className="scroll-zoom absolute inset-[-10%]">
-                <Image
-                  src="/media/kalosze.jpg"
-                  alt="Dzieci w kolorowych kaloszach po zabawie na dworze"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 480px, 90vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="parallax-y-rev absolute -left-3 bottom-8 hidden w-36 sm:block md:w-44">
-              <div className="float-slow overflow-hidden rounded-2xl border-4 border-cream shadow-lg">
-                <div className="relative aspect-square">
-                  <Image
-                    src="/media/muchomor.jpg"
-                    alt="Dziewczynka maluje przy stole"
-                    fill
-                    sizes="180px"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="parallax-y absolute right-2 top-2 sm:right-3 sm:top-3">
-            <div className="float-mid rounded-2xl bg-butter-soft/95 px-3 py-2 shadow-lg backdrop-blur [animation-delay:-1.5s] sm:px-4 sm:py-3">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-teal sm:text-xs">Opieka</p>
-              <p className="font-display text-lg text-ink sm:text-2xl">7:00–17:00</p>
-              <p className="text-[10px] text-muted sm:text-xs">pon.–pt.</p>
-            </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HomeHero />
 
       <section className="border-y border-line bg-paper" aria-label="Zaufanie">
         <div className="mx-auto grid max-w-6xl gap-6 px-5 py-8 sm:grid-cols-2 lg:grid-cols-4">
