@@ -290,14 +290,19 @@ summary {
   }
 }
 
+/* Opacity finishes at 3s (60%); blur starts clearing at ~90% opacity and eases out through 5s. */
 @keyframes mobile-dock-reveal {
   0% {
     opacity: 0;
     filter: blur(6px);
   }
-  90% {
+  54% {
     opacity: 0.9;
     filter: blur(6px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(5.5px);
   }
   100% {
     opacity: 1;
@@ -306,7 +311,7 @@ summary {
 }
 
 .mobile-dock-reveal {
-  animation: mobile-dock-reveal 3s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: mobile-dock-reveal 5s linear both;
 }
 
 @media (prefers-reduced-motion: reduce) {

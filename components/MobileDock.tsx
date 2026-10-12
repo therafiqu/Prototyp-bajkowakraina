@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { phoneDisplay, phoneHref } from "@/lib/content";
 
+const REVEAL_DELAY_MS = 3000;
+
 export function MobileDock() {
   const pathname = usePathname();
   const [revealed, setRevealed] = useState(false);
@@ -13,32 +15,8 @@ export function MobileDock() {
     if (pathname === "/kontakt") return;
 
     setRevealed(false);
-
-    const hero = document.querySelector<HTMLElement>("main > section");
-    if (!hero) {
-      setRevealed(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting && entry.boundingClientRect.bottom <= 0) {
-          setRevealed(true);
-        }
-      },
-      { threshold: 0 },
-    );
-
-    observer.observe(hero);
-
-    const checkPast = () => {
-      if (hero.getBoundingClientRect().bottom <= 0) {
-        setRevealed(true);
-      }
-    };
-    checkPast();
-
-    return () => observer.disconnect();
+    const timer = window.setTimeout(() => setRevealed(true), REVEAL_DELAY_MS);
+    return () => window.clearTimeout(timer);
   }, [pathname]);
 
   if (pathname === "/kontakt") return null;
