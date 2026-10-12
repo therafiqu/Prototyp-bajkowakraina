@@ -290,6 +290,25 @@ summary {
   }
 }
 
+@keyframes mobile-dock-reveal {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+  90% {
+    opacity: 0.9;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.mobile-dock-reveal {
+  animation: mobile-dock-reveal 5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rise,
   .scroll-rise,
@@ -303,5 +322,11 @@ summary {
   .parallax-spin,
   .scroll-zoom {
     animation: none;
+  }
+
+  .mobile-dock-reveal {
+    animation: none;
+    opacity: 1;
+    filter: none;
   }
 }

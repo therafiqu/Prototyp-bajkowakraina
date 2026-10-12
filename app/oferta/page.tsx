@@ -28,7 +28,7 @@ export default function OfferPage() {
           <>
             Dwie grupy wiekowe.
             <br />
-            <span className="whitespace-nowrap">Ten sam spokojny standard dnia.</span>
+            <span className="md:whitespace-nowrap">Ten sam spokojny standard dnia.</span>
           </>
         }
         lead="Opiekujemy się dziećmi od około 1. do 6. roku życia. Poniżej widać, co jest wspólne, a czym przedszkole różni się od żłobka — zanim zadzwonisz."
