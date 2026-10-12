@@ -293,11 +293,11 @@ summary {
 @keyframes mobile-dock-reveal {
   0% {
     opacity: 0;
-    filter: blur(12px);
+    filter: blur(6px);
   }
   90% {
     opacity: 0.9;
-    filter: blur(12px);
+    filter: blur(6px);
   }
   100% {
     opacity: 1;
@@ -306,7 +306,7 @@ summary {
 }
 
 .mobile-dock-reveal {
-  animation: mobile-dock-reveal 5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: mobile-dock-reveal 3s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
