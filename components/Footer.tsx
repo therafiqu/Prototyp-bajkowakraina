@@ -4,7 +4,7 @@ import { hours, locations, nav, phoneDisplay, phoneHref } from "@/lib/content";
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-teal-deep text-cream">
+    <footer className="border-t border-line bg-teal-deep pb-24 text-cream md:pb-0">
       <div className="story-ribbon" aria-hidden />
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
         <div>

@@ -223,7 +223,7 @@ export function HomeHero() {
           </motion.div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md pb-16 lg:max-w-none">
+        <div className="relative mx-auto w-full max-w-[min(100%,22rem)] pb-14 sm:max-w-md sm:pb-16 lg:max-w-none">
           <CollagePiece
             active={active}
             reduce={reduce}
@@ -231,8 +231,8 @@ export function HomeHero() {
             from={{ x: "48vw", y: "0%" }}
             className="relative"
           >
-            <div className="relative aspect-[3/2]">
-              <div className="scroll-zoom absolute inset-[-6%]">
+            <div className="relative aspect-[3/2] overflow-hidden sm:overflow-visible">
+              <div className="scroll-zoom absolute inset-0 sm:inset-[-6%]">
                 <Image
                   src="/media/przedszkole-chmura.png"
                   alt="Przedszkole — napis na chmurce"
@@ -250,7 +250,7 @@ export function HomeHero() {
             reduce={reduce}
             delay={0.18}
             from={{ x: "48vw", y: "16%" }}
-            className="absolute -left-3 bottom-0 hidden w-[6.93rem] sm:block md:w-[8.47rem]"
+            className="absolute -left-1 bottom-0 w-[5.5rem] sm:-left-3 sm:w-[6.93rem] md:w-[8.47rem]"
           >
             <div className="parallax-y-rev">
               <div className="float-slow overflow-hidden rounded-2xl border-4 border-cream bg-cream shadow-lg">

@@ -73,7 +73,7 @@ const jsonLd = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pl" className={`${display.variable} ${body.variable}`}>
-      <body className="pb-24 antialiased md:pb-0">
+      <body className="antialiased">
         <a className="skip" href="#tresc">
           Przejdź do treści
         </a>

@@ -37,7 +37,7 @@ export default function AboutPage() {
           <span className="tracking-normal">
             Poznaj nasz zespół{"\u00A0"}❤️
             <br />
-            <span className="whitespace-nowrap">– kadra przedszkola i żłobka</span>
+            <span className="md:whitespace-nowrap">– kadra przedszkola i żłobka</span>
           </span>
         }
         lead="Z sercem dla dzieci, z troską o ich rozwój i poczucie bezpieczeństwa."
