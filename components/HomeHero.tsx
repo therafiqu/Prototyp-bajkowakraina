@@ -9,6 +9,7 @@ import {
   type Transition,
 } from "framer-motion";
 import { ButtonLink } from "@/components/Button";
+import { CloudLetterTitle } from "@/components/CloudLetterTitle";
 import { StoryShapes } from "@/components/StoryShapes";
 import { phoneDisplay, phoneHref } from "@/lib/content";
 
@@ -233,14 +234,7 @@ export function HomeHero() {
           >
             <div className="relative aspect-[3/2] overflow-hidden sm:overflow-visible">
               <div className="scroll-zoom absolute inset-0 sm:inset-[-6%]">
-                <Image
-                  src="/media/przedszkole-chmura.png"
-                  alt="Przedszkole — napis na chmurce"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 480px, 90vw"
-                  className="object-contain"
-                />
+                <CloudLetterTitle className="h-full" />
               </div>
             </div>
           </CollagePiece>
