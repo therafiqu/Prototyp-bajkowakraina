@@ -34,7 +34,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="O placówce"
         title={
-          <span className="tracking-normal max-md:text-[clamp(1.5rem,6.2vw,2.25rem)] max-md:leading-[1.1]">
+          <span className="tracking-normal">
             <span className="whitespace-nowrap">Poznaj nasz zespół{"\u00A0"}❤️</span>
             <br />
             <span className="md:whitespace-nowrap">– kadra przedszkola i żłobka</span>
