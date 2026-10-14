@@ -33,30 +33,92 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="O placówce"
-        title="O nas – małe przedszkole, wielkie serca"
-        lead="Dziś pomagamy odkrywać świat. Jutro pomagamy odważnie w nim żyć."
-      />
-      <section className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-24">
-        <div className="scroll-rise space-y-5 text-lg leading-relaxed text-muted">
+        title={
+          <span className="tracking-normal">
+            Poznaj nasz zespół{"\u00A0"}❤️
+            <br />
+            <span className="whitespace-nowrap">– kadra przedszkola i żłobka</span>
+          </span>
+        }
+        lead="Z sercem dla dzieci, z troską o ich rozwój i poczucie bezpieczeństwa."
+      >
+        {/* Match Kontakt / Oferta hero height (CTA row). */}
+        <div className="h-12" aria-hidden />
+      </PageHero>
+      <section className="mx-auto max-w-3xl px-5 pt-16 text-center md:pt-24">
+        <p className="scroll-rise text-lg leading-relaxed text-muted md:text-xl">
+          Naszą największą wartością są ludzie – pełni ciepła, zaangażowania i pasji do pracy z najmłodszymi. Tworzymy zespół, dla którego opieka nad dziećmi to nie tylko praca, ale przede wszystkim misja, odpowiedzialność i codzienna radość wspierania ich rozwoju.
+        </p>
+      </section>
+
+      <section className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-16">
+        <div className="scroll-rise space-y-8 text-lg leading-relaxed text-muted">
+          <h2 className="text-2xl text-ink md:text-3xl">Wykwalifikowana kadra przedszkola</h2>
           <p>
-            Wierzymy, że każde dziecko jest wyjątkowe i każde zasługuje na to, by być dostrzeżone, wysłuchane i otoczone troską. Dlatego tworzymy kameralne przedszkole, w którym najważniejszy jest mały człowiek – jego potrzeby, emocje, zainteresowania i indywidualne tempo rozwoju.
+            W naszym przedszkolu dzieci otaczają opieką wykwalifikowani nauczyciele wychowania przedszkolnego, którzy posiadają wieloletnie doświadczenie i z zaangażowaniem wspierają rozwój swoich podopiecznych. Dbamy o to, aby każdy dzień był okazją do nauki, zabawy i odkrywania świata.
           </p>
           <p>
-            Naszym celem jest nie tylko przygotowanie dziecka do rozpoczęcia nauki w szkole, ale przede wszystkim wyposażenie go w umiejętności, które pomogą mu odnaleźć się w otaczającym świecie.
-          </p>
-          <p className="text-ink">
-            Bo dla nas przedszkole to coś więcej niż miejsce opieki i nauki. To przestrzeń, w której dziecko buduje fundamenty na całe życie.
+            Nasi nauczyciele rozwijają dziecięcą ciekawość, wspierają samodzielność, kreatywność oraz umiejętności społeczne. Indywidualne podejście do każdego dziecka pozwala nam dostrzegać jego potrzeby, zainteresowania i wyjątkowe możliwości.
           </p>
         </div>
         <div className="scroll-rise relative min-h-80 overflow-hidden rounded-[28px]">
           <div className="scroll-zoom absolute inset-[-10%]">
-          <Image
-            src="/media/motylek.jpg"
-            alt="Dziecko koloruje motyla kredką przy stoliku"
-            fill
-            className="object-cover"
-            sizes="(min-width: 768px) 40vw, 100vw"
-          />
+            <Image
+              src="/media/rysunki.jpg"
+              alt="Kolorowe dziecięce rysunki i prace plastyczne"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 40vw, 100vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-16">
+        <div className="scroll-rise space-y-8 text-lg leading-relaxed text-muted">
+          <h2 className="text-2xl text-ink md:text-3xl">Troskliwe opiekunki w żłobku</h2>
+          <p>
+            W żłobku nad najmłodszymi dziećmi czuwają troskliwe opiekunki, które posiadają odpowiednie przygotowanie do opieki nad dziećmi do lat 3. Zapewniamy maluszkom czułość, bliskość oraz warunki sprzyjające bezpiecznemu i harmonijnemu rozwojowi.
+          </p>
+          <p>
+            Nasze opiekunki stale poszerzają swoją wiedzę i umiejętności poprzez szkolenia, między innymi z zakresu pierwszej pomocy. Każdego dnia dbają o dobre samopoczucie dzieci, ich potrzeby emocjonalne oraz poczucie bezpieczeństwa. Wiemy, jak ważne są pierwsze doświadczenia, dlatego stawiamy na cierpliwość, uważność i indywidualne podejście.
+          </p>
+        </div>
+        <div className="scroll-rise relative min-h-80 overflow-hidden rounded-[28px]">
+          <div className="scroll-zoom absolute inset-[-10%]">
+            <Image
+              src="/media/motylek.jpg"
+              alt="Dziecko koloruje motyla kredką przy stoliku"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 40vw, 100vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto grid max-w-6xl gap-10 px-5 py-12 pb-16 md:grid-cols-[1.1fr_0.9fr] md:py-16 md:pb-24">
+        <div className="scroll-rise space-y-8 text-lg leading-relaxed text-muted">
+          <h2 className="text-2xl text-ink md:text-3xl">Bezpieczne przedszkole i żłobek – miejsce pełne ciepła</h2>
+          <p>
+            Wierzymy, że najlepszy rozwój zaczyna się od poczucia bezpieczeństwa, akceptacji i bliskości. Dlatego tworzymy miejsce, w którym każde dziecko jest ważne, zauważane i otaczane troską.
+          </p>
+          <p>
+            Chcemy, aby rodzice wybierający nasze przedszkole lub żłobek mieli pewność, że powierzają swoje pociechy osobom, które podchodzą do swojej pracy z sercem i odpowiedzialnością.
+          </p>
+          <p className="text-ink">
+            Bo szczęśliwe dziecko to dziecko, które czuje się bezpieczne, akceptowane i kochane.{"\u00A0"}❤️
+          </p>
+        </div>
+        <div className="scroll-rise relative min-h-80 overflow-hidden rounded-[28px]">
+          <div className="scroll-zoom absolute inset-[-10%]">
+            <Image
+              src="/media/kalosze.jpg"
+              alt="Dzieci w błotnistych kaloszach po zabawie na dworze"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 40vw, 100vw"
+            />
           </div>
         </div>
       </section>

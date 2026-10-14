@@ -223,7 +223,7 @@ export function HomeHero() {
           </motion.div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div className="relative mx-auto w-full max-w-md pb-16 lg:max-w-none">
           <CollagePiece
             active={active}
             reduce={reduce}
@@ -231,15 +231,15 @@ export function HomeHero() {
             from={{ x: "48vw", y: "0%" }}
             className="relative"
           >
-            <div className="relative aspect-[3/2] overflow-hidden rounded-[28px] shadow-[0_30px_70px_-36px_rgba(36,48,46,0.55)]">
-              <div className="scroll-zoom absolute inset-[-10%]">
+            <div className="relative aspect-[3/2]">
+              <div className="scroll-zoom absolute inset-[-6%]">
                 <Image
-                  src="/media/kalosze.jpg"
-                  alt="Dzieci w kolorowych kaloszach po zabawie na dworze"
+                  src="/media/przedszkole-chmura.png"
+                  alt="Przedszkole — napis na chmurce"
                   fill
                   priority
                   sizes="(min-width: 1024px) 480px, 90vw"
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
@@ -250,7 +250,7 @@ export function HomeHero() {
             reduce={reduce}
             delay={0.18}
             from={{ x: "48vw", y: "16%" }}
-            className="absolute -left-3 bottom-8 hidden w-[6.93rem] sm:block md:w-[8.47rem]"
+            className="absolute -left-3 bottom-0 hidden w-[6.93rem] sm:block md:w-[8.47rem]"
           >
             <div className="parallax-y-rev">
               <div className="float-slow overflow-hidden rounded-2xl border-4 border-cream bg-cream shadow-lg">

@@ -27,7 +27,7 @@ export function PageHero({
           {title}
         </Heading>
         {lead ? (
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{lead}</p>
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted">{lead}</p>
         ) : null}
         {children ? <div className="mt-7">{children}</div> : null}
       </div>
